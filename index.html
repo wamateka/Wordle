@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container">
-        <h1 class="heading">WORDLE</h1>
+      <h1 class="heading">WORDLE</h1>
       <section class="wordle-grid">
         <input type="text" value=" " readonly class="box box1" />
         <input type="text" value=" " readonly class="box box2" />
@@ -46,9 +46,18 @@
         <input type="text" value=" " readonly class="box box30" />
         <input t2pe="text" value=" " readonly class="lastBox" />
       </section>
+      <input type="text" id="kbrd" class="kbrd"/>
+      <div class="msg msg-on">
+      <p class= "text">🎉 Welcome to Wordle the Challenge!
+Guess the hidden 5-letter word in 6 tries or less.
+Green means correct spot, yellow means wrong spot, and gray means it's not in the word.
+Let's see how sharp your vocabulary is — good luck! 💡🔤</p>
+      <section class="buttons">
       <button class="btn start" type="button" onclick="setTypeBox(true)">Start</button>
-      <button class="btn stop" type="button" onclick="setTypeBox(false)">Stop</button>
+      </section>
     </div>
+    </div>
+    
     <script src="common_words.js"></script>
     <script src="script.js"></script>
   </body> 
