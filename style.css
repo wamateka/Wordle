@@ -1,6 +1,6 @@
 body{
     background-color: rgb(37, 37, 37);
-    font-family: "Arial", "Arial Black", sans-serif;
+    font-family: "MV Boli", "MV Boli", sans-serif;
 } 
 .container{
     display: flex;
@@ -17,13 +17,19 @@ body{
 }
 .box{
     background-color: black;
+    font-family: 'Impact', 'Impact';
     text-align: center;
+    box-shadow: rgba(76, 77, 76, 0.2) 0 -25px 18px -14px inset,rgba(76, 77, 76, 0.2) 0 1px 2px,rgba(76, 77, 76, 0.2) 0 2px 4px,rgba(76, 77, 76, 0.2) 0 4px 8px,rgba(76, 77, 76, 0.2) 0 8px 16px,rgba(76, 77, 76, 0.2) 0 16px 32px;
+    border-radius: 6%;
 }
-.box1{
+.solvedBox{
     background-color: greenyellow;
 }
-.box2{
-    background-color: rgb(33, 33, 33);
+.hintBox{
+    background-color: rgb(255, 145, 0);
+}
+.wrongBox{
+    background-color: rgb(53, 53, 53);
 }
 h1{
     color: white;
@@ -39,4 +45,34 @@ input{
 }
 button{
     margin: 20px;
+}
+
+
+
+
+
+
+/* CSS */
+.btn {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
 }
