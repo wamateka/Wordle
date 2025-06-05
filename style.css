@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(37, 37, 37);
+    font-family: "Arial", "Arial Black", sans-serif;
+} 
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wordle-grid{
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px 70px;
+    grid-template-rows: 70px 70px 70px 70px 70px 70px;
+    grid-auto-rows: 0px;
+    gap: 10px;
+}
+.box{
+    background-color: black;
+    text-align: center;
+}
+.box1{
+    background-color: greenyellow;
+}
+.box2{
+    background-color: rgb(33, 33, 33);
+}
+h1{
+    color: white;
+    font-size: 50px;
+}
+.lastBox{
+    display: none;
+}
+input{
+    color: white;
+    font-size: 50px;
+    border: 2px solid gray;
+}
+button{
+    margin: 20px;
+}

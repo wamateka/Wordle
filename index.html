@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="animate__animated animate__swing">WORDLE</h1>
+      <section class="wordle-grid">
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="box" />
+        <input type="text" value=" " readonly class="lastBox" />
+      </section>
+      <button class="btn start" type="button" onclick="setTypeBox(true)">Start</button>
+      <button class="btn stop" type="button" onclick="setTypeBox(false)">Stop</button>
+      <button class="btn stop" type="button" onclick="solvedRow = true">solved</button>
 
-    <section class="">
-        <input type="text" value=" " readonly>
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-        <input type="text"value = " ">
-    </section>
-</body>
+
+    </div>
+    <script src="common_words.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
