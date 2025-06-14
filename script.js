@@ -1,4 +1,4 @@
-
+alert('start Game');
 var randIndex = Math.floor(Math.random() * (words.length - 1));
 var wordle = words[randIndex];
 var guessWord = '';
