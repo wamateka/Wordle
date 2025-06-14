@@ -19,6 +19,7 @@ function displayMessageBox(text) {
     $p.innerHTML = text;
     $.classList.remove('msg-off');
     $.classList.add('msg-on');
+    animateCSS($,'bounceIn')
 }
 function hideMessageBox() {
     var $ = document.querySelector('.msg')
@@ -31,7 +32,7 @@ function setBoxchar(n, c) {
     document.querySelectorAll("input")[n].value = c.toUpperCase();
 
     if (guessWord.length < 5) {
-        guessWord = guessWord + c.toUpperCase()
+        guessWord = guessWord + c;
     }
 }
 
@@ -46,6 +47,25 @@ function setTypeBox(value) {
     typeBoxEnable = value;
     console.log('TypeBox Set to:' + value);
     hideMessageBox();
+}
+function restart() {
+
+}
+function clearGrid(){
+    guessWord = '';
+    index = 0;
+    round = 0;
+    rminInd = 0;
+    rmaxInd = 0;
+    solvedRow = false;
+    win = false;
+    rminInd += round * 5;
+    rmaxInd += rminInd + 5;
+    for(var i = 0; i<10;i++){
+        document.querySelectorAll("input")[n].value ='';
+        
+    }
+
 }
 function clearRow(min, max) {
     for (var i = min; i < max + 1; i++) {
@@ -66,16 +86,18 @@ function restart(min, max) {
 }
 function correctWord(min, max) {
     typeBoxEnable = false;
-    displayMessageBox(congs)
     correctRow(min, max);
     correctRow(min, max);
+    setTimeout(() => {
+        displayMessageBox(congs);
+    }, 1500);
 }
 function wrongWord(min, max) {
     typeBoxEnable = true;
     wrongRow(min, max);
     wrongRow(min, max);
 }
-function indexify(s, g, w,e) {
+function indexify(s, g, w, e) {
     // Collect all animation promises
     let promises = [];
     for (var i = 0; i < 5; i++) {
@@ -101,7 +123,7 @@ function indexify(s, g, w,e) {
 
 // }
 document.querySelector('.kbrd').addEventListener("keydown", solveRound);
-document.addEventListener("click", function(){
+document.addEventListener("click", function () {
     document.querySelector('.kbrd').focus();
 })
 
@@ -120,7 +142,7 @@ function solveRound(event) {
             if (checkWord(guessWord, wordle)) {
                 solvedRow = true;
                 win = true;
-                indexify(rminInd, guessWord, wordle).then(() => {
+                indexify(rminInd, guessWord, wordle, true).then(() => {
                     correctWord(rminInd, rmaxInd);
                 })
                 console.log(guessWord + '===' + wordle);
@@ -222,11 +244,11 @@ function wrongRow(min, max) {
         animateCSS(element, 'shakeX');
     }
 }
-function clearRow(min,max){
-    for(var i = min; i< max; i++){
-        
+function clearRow(min, max) {
+    for (var i = min; i < max; i++) {
+
         var element = document.querySelectorAll('.box')[i];
-        console.log(i+ '...elem:'+ element )
+        console.log(i + '...elem:' + element)
         element.classList.remove('wrongBox');
     }
 }
