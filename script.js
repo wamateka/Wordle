@@ -122,7 +122,7 @@ function indexify(s, g, w, e) {
 // function nextRow(){
 
 // }
-document.querySelector('.kbrd').addEventListener("keydown", solveRound);
+document.querySelector('.kbrd').addEventListener("keypress", solveRound);
 document.addEventListener("click", function () {
     document.querySelector('.kbrd').focus();
 })
