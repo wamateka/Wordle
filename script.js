@@ -179,7 +179,6 @@ function solveRound(event) {
 
         } else {
             if (event.keyCode >= 65 && event.keyCode <= 95) {
-                alert(event.keyCode+'-'+event.which);
                 console.log('adding element at ' + index + ', next index: ' + (index + 1));
                 (index < rmaxInd && index >= rminInd) ? setBoxchar(index, event.key) : setBoxcharempty(index)
                 if (index < rmaxInd) {
