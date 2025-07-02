@@ -1,4 +1,3 @@
-alert('start Game');
 var randIndex = Math.floor(Math.random() * (words.length - 1));
 var wordle = words[randIndex];
 var guessWord = '';
@@ -122,7 +121,11 @@ function indexify(s, g, w, e) {
 // function nextRow(){
 
 // }
-document.querySelector('.kbrd').addEventListener("keydown", solveRound);
+// document.querySelector('.kbrd').addEventListener("keydown", solveRound);
+document.querySelector('.kbrd').addEventListener("input", function(event){
+    console.log(event)
+});
+
 document.addEventListener("click", function () {
     document.querySelector('.kbrd').focus();
 })
@@ -179,7 +182,6 @@ function solveRound(event) {
 
         } else {
             if (event.keyCode >= 65 && event.keyCode <= 95) {
-                alert(event.keyCode+'-'+event.which);
                 console.log('adding element at ' + index + ', next index: ' + (index + 1));
                 (index < rmaxInd && index >= rminInd) ? setBoxchar(index, event.key) : setBoxcharempty(index)
                 if (index < rmaxInd) {
@@ -220,8 +222,7 @@ function correctRow(min, max) {
     for (var i = min; i < max; i++) {
         console.log(max);
         var element = document.querySelectorAll('.box')[i];
-        animateCSS(element, 'flash')
-
+        animateCSS(element, 'tada')
     }
 }
 function correctBox(n) {
@@ -255,7 +256,7 @@ function clearRow(min, max) {
 }
 
 const animateCSS = (element, animation, prefix = 'animate__') =>
-    // We create a Promise and return it
+    // We create a Promise and return 
     new Promise((resolve, reject) => {
         const animationName = `${prefix}${animation}`;
         const node = element;
